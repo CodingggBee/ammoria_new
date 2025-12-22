@@ -44,22 +44,28 @@ export default function Home() {
       ],
     },
     {
-      title: "Commercial Office Build-Out",
-      category: "Commercial",
-      description:
-        "Full office space renovation with modern design and efficient layout.",
-      image: "bg-gradient-to-br from-purple-400 to-purple-600",
-      // Add your commercial featured images here if needed
-      images: [],
+      title: "Villa Contracting",
+      category: "Resedential Project",
+      description:"",
+        // "High-quality road and infrastructure works delivering safe, durable, and efficient transport routes.",
+      image: "/projects/Villa Contracting2.jpg",
+      images: [
+        "/projects/Villa Contracting2.jpg",
+        "/projects/Villa Contracting1.jpg",
+      ],
     },
     {
-      title: "Historic Home Restoration",
-      category: "Residential",
+      title: "Al Ain Water Factory",
+      category: "Industrial & Commercial",
       description:
-        "Careful restoration preserving original character while adding modern amenities.",
-      image: "bg-gradient-to-br from-amber-400 to-amber-600",
+        "",
+      image: "/projects/Al Ain Water Factory1.jpg",
       // Add your residential featured images here if needed
-      images: [],
+      images: [
+        "/projects/Al Ain Water Factory1.jpg",
+        "/projects/Al Ain Water Factory2.jpg",
+        "/projects/Al Ain Water Factory3.jpg"
+      ],
     },
   ];
 
