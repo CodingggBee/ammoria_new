@@ -15,7 +15,7 @@ export default function Projects() {
   const projects = [
     {
       id: 1,
-      title: "Modern Kitchen Renovation",
+      title: "Residential Projects",
       category: "Residential",
       location: "Downtown District",
       year: "2024",

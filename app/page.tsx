@@ -2,6 +2,7 @@
 
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Home() {
   const [isStickyVisible, setIsStickyVisible] = useState(false);
@@ -201,7 +202,7 @@ export default function Home() {
                 title: "Modern Kitchen Renovation",
                 category: "Residential",
                 description: "Complete kitchen transformation with custom cabinetry and premium finishes.",
-                image: "bg-gradient-to-br from-blue-400 to-blue-600",
+                image: "/projects/modern-kitchen.jpg",
               },
               {
                 title: "Commercial Office Build-Out",
@@ -220,11 +221,25 @@ export default function Home() {
                 key={index}
                 className="group overflow-hidden rounded-xl bg-white shadow-sm transition-all hover:shadow-xl"
               >
-                <div className={`h-48 ${project.image} flex items-center justify-center text-white opacity-90 transition-opacity group-hover:opacity-100`}>
-                  <svg className="h-16 w-16 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                  </svg>
-                </div>
+                {project.image.startsWith("/") ? (
+                  <div className="relative h-48 overflow-hidden">
+                    <Image
+                      src={project.image}
+                      alt={project.title}
+                      fill
+                      sizes="(min-width:1024px) 33vw, (min-width:768px) 50vw, 100vw"
+                      className="object-cover transition-transform duration-300 group-hover:scale-105"
+                      priority={index === 0}
+                    />
+                    <div className="absolute inset-0 bg-black/10 transition-colors group-hover:bg-black/5" />
+                  </div>
+                ) : (
+                  <div className={`h-48 ${project.image} flex items-center justify-center text-white opacity-90 transition-opacity group-hover:opacity-100`}>
+                    <svg className="h-16 w-16 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                    </svg>
+                  </div>
+                )}
                 <div className="p-6">
                   <div className="mb-2 text-sm font-medium text-blue-600">{project.category}</div>
                   <h3 className="text-xl font-semibold text-slate-900">{project.title}</h3>
