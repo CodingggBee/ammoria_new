@@ -4,8 +4,23 @@ import { useState, useEffect } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+type FeaturedProject = {
+  title: string;
+  category: string;
+  description: string;
+  image: string;
+  images?: string[]; // optional gallery images
+};
+
+type LightboxState = {
+  images: string[];
+  index: number;
+  title: string;
+} | null;
+
 export default function Home() {
   const [isStickyVisible, setIsStickyVisible] = useState(false);
+  const [lightbox, setLightbox] = useState<LightboxState>(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -15,6 +30,85 @@ export default function Home() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const featuredProjects: FeaturedProject[] = [
+    {
+      title: "Infrastructure & Roads",
+      category: "Infrastructure",
+      description:
+        "High-quality road and infrastructure works delivering safe, durable, and efficient transport routes.",
+      image: "/projects/Infrastructue & Roads1.jpg",
+      images: [
+        "/projects/Infrastructue & Roads1.jpg",
+        "/projects/Infrastructue & Roads2.jpg",
+      ],
+    },
+    {
+      title: "Commercial Office Build-Out",
+      category: "Commercial",
+      description:
+        "Full office space renovation with modern design and efficient layout.",
+      image: "bg-gradient-to-br from-purple-400 to-purple-600",
+    },
+    {
+      title: "Historic Home Restoration",
+      category: "Residential",
+      description:
+        "Careful restoration preserving original character while adding modern amenities.",
+      image: "bg-gradient-to-br from-amber-400 to-amber-600",
+    },
+  ];
+
+  const openLightbox = (project: FeaturedProject, startIndex = 0) => {
+    if (!project.images || project.images.length === 0) return;
+    setLightbox({
+      images: project.images,
+      index: startIndex,
+      title: project.title,
+    });
+  };
+
+  const closeLightbox = () => setLightbox(null);
+
+  const showNext = () => {
+    setLightbox((current) => {
+      if (!current) return current;
+      return {
+        ...current,
+        index: (current.index + 1) % current.images.length,
+      };
+    });
+  };
+
+  const showPrev = () => {
+    setLightbox((current) => {
+      if (!current) return current;
+      return {
+        ...current,
+        index:
+          (current.index - 1 + current.images.length) %
+          current.images.length,
+      };
+    });
+  };
+
+  // Close homepage lightbox with Escape key (and support arrow navigation)
+  useEffect(() => {
+    if (!lightbox) return;
+
+    const handleKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") {
+        setLightbox(null);
+      } else if (event.key === "ArrowRight") {
+        showNext();
+      } else if (event.key === "ArrowLeft") {
+        showPrev();
+      }
+    };
+
+    window.addEventListener("keydown", handleKeyDown);
+    return () => window.removeEventListener("keydown", handleKeyDown);
+  }, [lightbox]);
 
   return (
     <>
@@ -197,56 +291,77 @@ export default function Home() {
             </p>
           </div>
           <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
-            {[
-              {
-                title: "Modern Kitchen Renovation",
-                category: "Residential",
-                description: "Complete kitchen transformation with custom cabinetry and premium finishes.",
-                image: "/projects/modern-kitchen.jpg",
-              },
-              {
-                title: "Commercial Office Build-Out",
-                category: "Commercial",
-                description: "Full office space renovation with modern design and efficient layout.",
-                image: "bg-gradient-to-br from-purple-400 to-purple-600",
-              },
-              {
-                title: "Historic Home Restoration",
-                category: "Residential",
-                description: "Careful restoration preserving original character while adding modern amenities.",
-                image: "bg-gradient-to-br from-amber-400 to-amber-600",
-              },
-            ].map((project, index) => (
-              <div
-                key={index}
-                className="group overflow-hidden rounded-xl bg-white shadow-sm transition-all hover:shadow-xl"
-              >
-                {project.image.startsWith("/") ? (
-                  <div className="relative h-48 overflow-hidden">
-                    <Image
-                      src={project.image}
-                      alt={project.title}
-                      fill
-                      sizes="(min-width:1024px) 33vw, (min-width:768px) 50vw, 100vw"
-                      className="object-cover transition-transform duration-300 group-hover:scale-105"
-                      priority={index === 0}
-                    />
-                    <div className="absolute inset-0 bg-black/10 transition-colors group-hover:bg-black/5" />
+            {featuredProjects.map((project, index) => {
+              const hasImages = project.images && project.images.length > 0;
+              const isImagePath = project.image.startsWith("/");
+
+              return (
+                <div
+                  key={project.title}
+                  className="group overflow-hidden rounded-xl bg-white shadow-sm transition-all hover:shadow-xl"
+                >
+                  {isImagePath ? (
+                    <button
+                      type="button"
+                      onClick={() =>
+                        hasImages
+                          ? openLightbox(project, 0)
+                          : undefined
+                      }
+                      className="relative h-48 w-full overflow-hidden text-left"
+                    >
+                      <Image
+                        src={project.image}
+                        alt={project.title}
+                        fill
+                        sizes="(min-width:1024px) 33vw, (min-width:768px) 50vw, 100vw"
+                        className="object-cover transition-transform duration-300 group-hover:scale-105"
+                        priority={index === 0}
+                      />
+                      <div className="absolute inset-0 bg-black/10 transition-colors group-hover:bg-black/5" />
+                    </button>
+                  ) : (
+                    <div
+                      className={`h-48 ${project.image} flex items-center justify-center text-white opacity-90 transition-opacity group-hover:opacity-100`}
+                    >
+                      <svg
+                        className="h-16 w-16 opacity-50"
+                        fill="none"
+                        stroke="currentColor"
+                        viewBox="0 0 24 24"
+                      >
+                        <path
+                          strokeLinecap="round"
+                          strokeLinejoin="round"
+                          strokeWidth={2}
+                          d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"
+                        />
+                      </svg>
+                    </div>
+                  )}
+                  <div className="p-6">
+                    <div className="mb-2 text-sm font-medium text-blue-600">
+                      {project.category}
+                    </div>
+                    <h3 className="text-xl font-semibold text-slate-900">
+                      {project.title}
+                    </h3>
+                    <p className="mt-2 text-slate-600">
+                      {project.description}
+                    </p>
+                    {hasImages && (
+                      <button
+                        type="button"
+                        onClick={() => openLightbox(project, 0)}
+                        className="mt-3 text-xs font-medium text-slate-500 hover:text-slate-700 underline"
+                      >
+                        View photos
+                      </button>
+                    )}
                   </div>
-                ) : (
-                  <div className={`h-48 ${project.image} flex items-center justify-center text-white opacity-90 transition-opacity group-hover:opacity-100`}>
-                    <svg className="h-16 w-16 opacity-50" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                )}
-                <div className="p-6">
-                  <div className="mb-2 text-sm font-medium text-blue-600">{project.category}</div>
-                  <h3 className="text-xl font-semibold text-slate-900">{project.title}</h3>
-                  <p className="mt-2 text-slate-600">{project.description}</p>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
           <div className="mt-12 text-center">
             <Link
@@ -326,6 +441,47 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      {lightbox && (
+        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/80">
+          <button
+            type="button"
+            onClick={closeLightbox}
+            className="absolute top-4 right-4 text-white text-2xl"
+            aria-label="Close image viewer"
+          >
+            ×
+          </button>
+
+          <button
+            type="button"
+            onClick={showPrev}
+            className="absolute left-4 text-white text-3xl"
+            aria-label="Previous image"
+          >
+            ‹
+          </button>
+
+          <div className="relative w-[90vw] max-w-4xl h-[70vh]">
+            <Image
+              src={lightbox.images[lightbox.index]}
+              alt={lightbox.title}
+              fill
+              sizes="90vw"
+              className="object-contain"
+            />
+          </div>
+
+          <button
+            type="button"
+            onClick={showNext}
+            className="absolute right-4 text-white text-3xl"
+            aria-label="Next image"
+          >
+            ›
+          </button>
+        </div>
+      )}
     </>
   );
 }
