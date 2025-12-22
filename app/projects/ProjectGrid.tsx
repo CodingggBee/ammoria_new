@@ -140,7 +140,7 @@ export default function ProjectGrid({ projects }: { projects: Project[] }) {
                   <span>•</span>
                   <span>{project.year}</span>
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900 mb-3">
+                <h3 className="text-xl font-semibold text-blue-600 mb-3">
                   {project.title}
                 </h3>
                 <p className="text-slate-600 mb-4 line-clamp-3">

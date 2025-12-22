@@ -37,10 +37,10 @@ export default function Home() {
       category: "Infrastructure",
       description:
         "High-quality road and infrastructure works delivering safe, durable, and efficient transport routes.",
-      image: "/projects/Infrastructue & Roads1.jpg",
+      image: "/projects/Infrastructue & Roads2.jpg",
       images: [
-        "/projects/Infrastructue & Roads1.jpg",
         "/projects/Infrastructue & Roads2.jpg",
+        "/projects/Infrastructue & Roads1.jpg",
       ],
     },
     {
@@ -347,7 +347,7 @@ export default function Home() {
                     <div className="mb-2 text-sm font-medium text-blue-600">
                       {project.category}
                     </div>
-                    <h3 className="text-xl font-semibold text-slate-900">
+                    <h3 className="text-xl font-semibold text-blue-600">
                       {project.title}
                     </h3>
                     <p className="mt-2 text-slate-600">

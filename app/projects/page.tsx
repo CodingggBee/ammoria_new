@@ -25,7 +25,7 @@ const projects = [
       // Fallback gradient background for when no images are provided
       image: "bg-gradient-to-br from-blue-400 to-blue-600",
       // You can add more images here as the gallery grows
-      images: ["/projects/Infrastructue & Roads1.jpg","/projects/Infrastructue & Roads2.jpg"],
+      images: ["/projects/Infrastructue & Roads2.jpg","/projects/Infrastructue & Roads1.jpg"],
       features: [
         // "Custom Cabinetry",
         // "Quartz Countertops",
