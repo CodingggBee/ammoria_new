@@ -49,6 +49,8 @@ export default function Home() {
       description:
         "Full office space renovation with modern design and efficient layout.",
       image: "bg-gradient-to-br from-purple-400 to-purple-600",
+      // Add your commercial featured images here if needed
+      images: [],
     },
     {
       title: "Historic Home Restoration",
@@ -56,6 +58,8 @@ export default function Home() {
       description:
         "Careful restoration preserving original character while adding modern amenities.",
       image: "bg-gradient-to-br from-amber-400 to-amber-600",
+      // Add your residential featured images here if needed
+      images: [],
     },
   ];
 

@@ -16,21 +16,21 @@ export const metadata: Metadata = {
 const projects = [
     {
       id: 1,
-      title: "Modern Kitchen Renovation",
+      title: "Infrastructure & Roads",
       category: "Residential",
       location: "Downtown District",
       year: "2024",
       description:
-        "Complete kitchen transformation with custom cabinetry, premium finishes, and state-of-the-art appliances. This project involved structural modifications and a complete redesign of the space.",
+        "High-quality road and infrastructure works delivering safe, durable, and efficient transport routes.",
       // Fallback gradient background for when no images are provided
       image: "bg-gradient-to-br from-blue-400 to-blue-600",
       // You can add more images here as the gallery grows
       images: ["/projects/Infrastructue & Roads1.jpg","/projects/Infrastructue & Roads2.jpg"],
       features: [
-        "Custom Cabinetry",
-        "Quartz Countertops",
-        "Smart Appliances",
-        "LED Lighting",
+        // "Custom Cabinetry",
+        // "Quartz Countertops",
+        // "Smart Appliances",
+        // "LED Lighting",
       ],
     },
     {
@@ -42,6 +42,9 @@ const projects = [
       description:
         "Full office space renovation with modern design and efficient layout. Created an open-concept workspace with private offices, conference rooms, and collaborative areas.",
       image: "bg-gradient-to-br from-purple-400 to-purple-600",
+      // Add your commercial project images here, for example:
+      // images: ["/projects/commercial-1.jpg", "/projects/commercial-2.jpg"],
+      images: [],
       features: [
         "Open Concept Design",
         "Conference Rooms",
@@ -58,6 +61,8 @@ const projects = [
       description:
         "Careful restoration preserving original character while adding modern amenities. This project required extensive research and attention to historical details.",
       image: "bg-gradient-to-br from-amber-400 to-amber-600",
+      // Add your historic home images here
+      images: [],
       features: [
         "Historical Preservation",
         "Modern Plumbing",
@@ -74,6 +79,8 @@ const projects = [
       description:
         "New construction focusing on sustainability and energy efficiency. Features solar panels, rainwater collection, and eco-friendly materials throughout.",
       image: "bg-gradient-to-br from-green-400 to-green-600",
+      // Add your eco-home images here
+      images: [],
       features: [
         "Solar Panels",
         "Rainwater Collection",
@@ -90,6 +97,8 @@ const projects = [
       description:
         "High-end bathroom renovation with premium fixtures, custom tile work, and spa-like features. Includes heated floors and smart home integration.",
       image: "bg-gradient-to-br from-cyan-400 to-cyan-600",
+      // Add your bathroom remodel images here
+      images: [],
       features: [
         "Heated Floors",
         "Premium Fixtures",
@@ -106,6 +115,8 @@ const projects = [
       description:
         "Complete retail space transformation with modern storefront, updated lighting, and efficient layout. Enhanced customer experience with improved flow and design.",
       image: "bg-gradient-to-br from-pink-400 to-pink-600",
+      // Add your retail space images here
+      images: [],
       features: [
         "Modern Storefront",
         "Updated Lighting",
@@ -122,6 +133,8 @@ const projects = [
       description:
         "Construction of a 12-unit residential complex with modern amenities, energy-efficient systems, and community spaces. Completed on time and within budget.",
       image: "bg-gradient-to-br from-indigo-400 to-indigo-600",
+      // Add your residential complex images here
+      images: [],
       features: [
         "12 Units",
         "Community Spaces",
@@ -138,6 +151,8 @@ const projects = [
       description:
         "Complete interior design and construction for a new restaurant. Created an inviting atmosphere with custom lighting, unique finishes, and efficient kitchen layout.",
       image: "bg-gradient-to-br from-orange-400 to-orange-600",
+      // Add your restaurant project images here
+      images: [],
       features: [
         "Custom Lighting",
         "Unique Finishes",
@@ -154,6 +169,8 @@ const projects = [
       description:
         "Transformed unfinished basement into a functional family space with home theater, game room, and guest suite. Included proper insulation and moisture control.",
       image: "bg-gradient-to-br from-teal-400 to-teal-600",
+      // Add your basement project images here
+      images: [],
       features: [
         "Home Theater",
         "Game Room",
