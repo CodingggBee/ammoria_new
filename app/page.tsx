@@ -33,10 +33,10 @@ export default function Home() {
 
   const featuredProjects: FeaturedProject[] = [
     {
-      title: "Infrastructure & Roads",
-      category: "Infrastructure",
-      description:
-        "High-quality road and infrastructure works delivering safe, durable, and efficient transport routes.",
+      title: "Sharjah University City, Main Road",
+      category: "Infrastructure & Roads",
+      description:"",
+        // "High-quality road and infrastructure works delivering safe, durable, and efficient transport routes.",
       image: "/projects/Infrastructue & Roads2.jpg",
       images: [
         "/projects/Infrastructue & Roads2.jpg",
@@ -344,7 +344,7 @@ export default function Home() {
                     </div>
                   )}
                   <div className="p-6">
-                    <div className="mb-2 text-sm font-medium text-blue-600">
+                    <div className="mb-2 text-sm font-medium text-slate-600">
                       {project.category}
                     </div>
                     <h3 className="text-xl font-semibold text-blue-600">

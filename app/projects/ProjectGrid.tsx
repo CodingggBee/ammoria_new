@@ -9,7 +9,7 @@ type Project = {
   title: string;
   category: string;
   location: string;
-  year: string;
+  // year: string;
   description: string;
   image?: string; // gradient fallback
   images?: string[]; // real images under /public
@@ -104,9 +104,9 @@ export default function ProjectGrid({ projects }: { projects: Project[] }) {
                   />
                   <div className="absolute inset-0 bg-black/10 transition-colors group-hover:bg-black/5" />
                   <div className="absolute top-4 right-4">
-                    <span className="rounded-full bg-white/80 px-3 py-1 text-sm font-semibold text-slate-900 shadow-sm">
+                    {/* <span className="rounded-full bg-white/80 px-3 py-1 text-sm font-semibold text-slate-900 shadow-sm">
                       {project.category}
-                    </span>
+                    </span> */}
                   </div>
                 </button>
               ) : (
@@ -127,9 +127,9 @@ export default function ProjectGrid({ projects }: { projects: Project[] }) {
                     />
                   </svg>
                   <div className="absolute top-4 right-4">
-                    <span className="rounded-full bg-white/20 backdrop-blur-sm px-3 py-1 text-sm font-semibold text-white">
+                    {/* <span className="rounded-full bg-white/20 backdrop-blur-sm px-3 py-1 text-sm font-semibold text-white">
                       {project.category}
-                    </span>
+                    </span> */}
                   </div>
                 </div>
               )}
@@ -137,8 +137,8 @@ export default function ProjectGrid({ projects }: { projects: Project[] }) {
               <div className="p-6">
                 <div className="mb-2 flex items-center gap-2 text-sm text-slate-500">
                   <span>{project.location}</span>
-                  <span>•</span>
-                  <span>{project.year}</span>
+                  {/* <span>•</span> */}
+                  {/* <span>{project.year}</span> */}
                 </div>
                 <h3 className="text-xl font-semibold text-blue-600 mb-3">
                   {project.title}

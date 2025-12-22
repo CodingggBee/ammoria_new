@@ -16,13 +16,14 @@ export const metadata: Metadata = {
 const projects = [
     {
       id: 1,
-      title: "Infrastructure & Roads",
-      category: "Residential",
-      location: "Downtown District",
-      year: "2024",
-      description:
-        "High-quality road and infrastructure works delivering safe, durable, and efficient transport routes.",
+      title: "Sharjah University City, Main Road",
+      category: "",
+      location: "Infrastructure & Roads",
+      // year: "",
+      // description:"High-quality road and infrastructure works delivering safe, durable, and efficient transport routes.",
+      description:"",
       // Fallback gradient background for when no images are provided
+      
       image: "bg-gradient-to-br from-blue-400 to-blue-600",
       // You can add more images here as the gallery grows
       images: ["/projects/Infrastructue & Roads2.jpg","/projects/Infrastructue & Roads1.jpg"],
@@ -38,7 +39,7 @@ const projects = [
       title: "Commercial Office Build-Out",
       category: "Commercial",
       location: "Business District",
-      year: "2024",
+      // year: "2024",
       description:
         "Full office space renovation with modern design and efficient layout. Created an open-concept workspace with private offices, conference rooms, and collaborative areas.",
       image: "bg-gradient-to-br from-purple-400 to-purple-600",
@@ -57,7 +58,7 @@ const projects = [
       title: "Historic Home Restoration",
       category: "Residential",
       location: "Heritage District",
-      year: "2023",
+      // year: "2023",
       description:
         "Careful restoration preserving original character while adding modern amenities. This project required extensive research and attention to historical details.",
       image: "bg-gradient-to-br from-amber-400 to-amber-600",
@@ -75,7 +76,7 @@ const projects = [
       title: "Sustainable Eco-Home",
       category: "Residential",
       location: "Green Valley",
-      year: "2024",
+      // year: "2024",
       description:
         "New construction focusing on sustainability and energy efficiency. Features solar panels, rainwater collection, and eco-friendly materials throughout.",
       image: "bg-gradient-to-br from-green-400 to-green-600",
@@ -93,7 +94,7 @@ const projects = [
       title: "Luxury Bathroom Remodel",
       category: "Residential",
       location: "Uptown Area",
-      year: "2024",
+      // year: "2024",
       description:
         "High-end bathroom renovation with premium fixtures, custom tile work, and spa-like features. Includes heated floors and smart home integration.",
       image: "bg-gradient-to-br from-cyan-400 to-cyan-600",
@@ -111,7 +112,7 @@ const projects = [
       title: "Retail Space Renovation",
       category: "Commercial",
       location: "Shopping Center",
-      year: "2023",
+      // year: "2023",
       description:
         "Complete retail space transformation with modern storefront, updated lighting, and efficient layout. Enhanced customer experience with improved flow and design.",
       image: "bg-gradient-to-br from-pink-400 to-pink-600",
@@ -129,7 +130,7 @@ const projects = [
       title: "Multi-Unit Residential Complex",
       category: "Residential",
       location: "Suburban Development",
-      year: "2023",
+      // year: "2023",
       description:
         "Construction of a 12-unit residential complex with modern amenities, energy-efficient systems, and community spaces. Completed on time and within budget.",
       image: "bg-gradient-to-br from-indigo-400 to-indigo-600",
@@ -147,7 +148,7 @@ const projects = [
       title: "Restaurant Interior Design & Build",
       category: "Commercial",
       location: "Downtown",
-      year: "2024",
+      // year: "2024",
       description:
         "Complete interior design and construction for a new restaurant. Created an inviting atmosphere with custom lighting, unique finishes, and efficient kitchen layout.",
       image: "bg-gradient-to-br from-orange-400 to-orange-600",
@@ -165,7 +166,7 @@ const projects = [
       title: "Basement Finishing",
       category: "Residential",
       location: "Family Neighborhood",
-      year: "2024",
+      // year: "2024",
       description:
         "Transformed unfinished basement into a functional family space with home theater, game room, and guest suite. Included proper insulation and moisture control.",
       image: "bg-gradient-to-br from-teal-400 to-teal-600",
