@@ -35,8 +35,8 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${isScrolled
-          ? "bg-white/95 backdrop-blur-md shadow-lg"
-          : "bg-white/80 backdrop-blur-sm"
+        ? "bg-white/95 backdrop-blur-md shadow-lg"
+        : "bg-white/80 backdrop-blur-sm"
         }`}
     >
       <nav className="mx-auto px-4 sm:px-6 lg:px-8 bg-white w-full">
@@ -45,7 +45,7 @@ export default function Header() {
           <Link
             href="/"
             className="flex items-center gap-2 text-xl font-bold text-slate-900 transition-colors hover:text-blue-600"
-            
+
           >
             {/* <svg
               className="h-8 w-8 text-blue-600"
@@ -63,8 +63,8 @@ export default function Header() {
             </svg> */}
             <span className="hidden sm:inline">
               <img src="/projects/logo.jpeg" alt="Logo"
-              className="w-65 h-22 object-contain rounded-full transition-transform duration-300 hover:scale-105 hover:brightness-110" />
-              
+                className="w-65 h-22 object-contain rounded-full transition-transform duration-300 hover:scale-105 hover:brightness-110" />
+
             </span>
             <span className="sm:hidden">Ammoria</span>
           </Link>
@@ -77,8 +77,8 @@ export default function Header() {
                 key={link.href}
                 href={link.href}
                 className={`text-sm font-medium transition-colors ${isActive(link.href)
-                    ? "text-blue-600"
-                    : "text-slate-700 hover:text-blue-600"
+                  ? "text-blue-600"
+                  : "text-slate-700 hover:text-blue-600"
                   }`
                 }
 
@@ -88,7 +88,7 @@ export default function Header() {
             ))}
             <Link
               href="/contact"
-              className="rounded-lg bg-blue-600 px-6 py-2 text-sm font-semibold text-white transition-all hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+              className="rounded-lg px-6 py-2 text-sm font-semibold text-white transition-all focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
               style={{
                 backgroundColor: "#163137",
                 borderColor: "#163137",
@@ -149,8 +149,8 @@ export default function Header() {
                   href={link.href}
                   onClick={() => setIsMenuOpen(false)}
                   className={`text-base font-medium transition-colors ${isActive(link.href)
-                      ? "text-blue-600"
-                      : "text-slate-700 hover:text-blue-600"
+                    ? "text-blue-600"
+                    : "text-slate-700 hover:text-blue-600"
                     }`}
                 >
                   {link.label}
@@ -159,7 +159,8 @@ export default function Header() {
               <Link
                 href="/contact"
                 onClick={() => setIsMenuOpen(false)}
-                className="rounded-lg bg-blue-600 px-6 py-3 text-base font-semibold text-white text-center transition-all hover:bg-blue-700"
+                className="rounded-lg px-6 py-3 text-base font-semibold text-white text-center transition-all hover:bg-blue-700"
+                style={{ backgroundColor: "#163137" }}
               >
                 Get Quote
               </Link>

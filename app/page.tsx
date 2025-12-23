@@ -174,12 +174,16 @@ export default function Home() {
       </section>
 
 
-      {/* Trust Indicators */}
+      {/* Trust Indicators
       <section className="bg-slate-50 py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             <div className="text-center">
-              <div className="text-4xl font-bold text-blue-600">25+</div>
+              <div className="text-4xl font-bold"
+              style={{ color: "#163137"}}
+              >
+                25+
+              </div>
               <div className="mt-2 text-sm font-medium text-slate-600">Years of Experience</div>
             </div>
             <div className="text-center">
@@ -218,14 +222,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Services Section */}
+      Services Section */}
       <section id="services" className="py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-blue-600 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight text-blue-500 sm:text-4xl">
               Our Services
             </h2>
-            <p className="mt-4 text-lg text-gray-300">
+            <p className="mt-4 text-lg text-blue-400">
               Comprehensive contracting solutions for residential and commercial projects
             </p>
           </div>
@@ -287,7 +291,9 @@ export default function Home() {
       <section id="projects" className="bg-slate-50 py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-slate-900 sm:text-4xl">
+            <h2 className="text-3xl font-bold tracking-tight sm:text-4xl"
+            style={{ color: "#163137" }}
+            >
               Featured Projects
             </h2>
             <p className="mt-4 text-lg text-slate-600">
@@ -371,6 +377,10 @@ export default function Home() {
             <Link
               href="/projects"
               className="inline-flex items-center rounded-lg bg-slate-900 px-6 py-3 text-base font-semibold text-white transition-all hover:bg-slate-800"
+              style={{
+                backgroundColor: "#163137",
+                borderColor: "#163137",
+              }}
             >
               View All Projects
               <svg className="ml-2 h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -395,7 +405,7 @@ export default function Home() {
               </div>
               <div className="flex flex-col gap-3 sm:flex-row">
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+971 65439390"
                   className="flex items-center justify-center gap-2 rounded-lg border border-slate-300 bg-white px-6 py-3 text-base font-semibold text-slate-900 transition-all hover:bg-slate-50"
                 >
                   <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -419,7 +429,11 @@ export default function Home() {
       )}
 
       {/* Contact Section (for anchor link) */}
-      <section id="contact" className="bg-slate-900 py-24 text-white">
+      <section id="contact" className="bg-slate-900 py-24 text-white"
+      style={{
+        backgroundColor: "#163137",
+        borderColor: "#163137",
+      }}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
@@ -431,9 +445,14 @@ export default function Home() {
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
                 href="tel:+1234567890"
-                className="rounded-lg bg-blue-600 px-8 py-4 text-base font-semibold text-white transition-all hover:bg-blue-700"
+                className="rounded-lg bg-blue-600 px-8 py-4 text-base font-semibold text-white transition-all hover:bg-blue-700
+                "
+                style={{
+                  backgroundColor: "#10252b",
+                  borderColor: "#163137",
+                }}
               >
-                (123) 456-7890
+                (+971) 65439390
               </a>
               <a
                 href="mailto:info@ammoriacontracting.com"
