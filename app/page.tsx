@@ -226,10 +226,11 @@ export default function Home() {
       <section id="services" className="py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-            <h2 className="text-3xl font-bold tracking-tight text-blue-500 sm:text-4xl">
+          <h2 className="text-3xl font-bold tracking-tight text-sky-300 sm:text-4xl">      
               Our Services
             </h2>
-            <p className="mt-4 text-lg text-blue-400">
+            <p className="mt-4 text-lg text-sky-300">
+
               Comprehensive contracting solutions for residential and commercial projects
             </p>
           </div>
@@ -273,7 +274,7 @@ export default function Home() {
                 <h3 className="text-xl font-semibold text-slate-900">{service.title}</h3>
                 <p className="mt-3 text-slate-600">{service.description}</p>
                 <a
-                  href="#contact"
+                  href="/contact"
                   className="mt-4 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700"
                 >
                   Learn more
@@ -444,7 +445,7 @@ export default function Home() {
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
-                href="tel:+1234567890"
+                href="tel:+97165439390"
                 className="rounded-lg bg-blue-600 px-8 py-4 text-base font-semibold text-white transition-all hover:bg-blue-700
                 "
                 style={{
@@ -455,7 +456,7 @@ export default function Home() {
                 (+971) 65439390
               </a>
               <a
-                href="mailto:info@ammoriacontracting.com"
+                href="mailto:ammoriacontracting@gmail.com"
                 className="rounded-lg border-2 border-white/20 bg-white/10 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/20"
               >
                 Email Us

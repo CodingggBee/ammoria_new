@@ -88,7 +88,7 @@ export default function ContactForm() {
       <form onSubmit={handleSubmit(onSubmit)} className="space-y-6" noValidate>
         {/* Name Field */}
         <div>
-          <label htmlFor="name" className="block text-sm font-medium text-slate-700 mb-2">
+          <label htmlFor="name" className="block text-sm font-medium tex  t-slate-700 mb-2">
             Name <span className="text-red-500">*</span>
           </label>
           <input
@@ -161,12 +161,10 @@ export default function ContactForm() {
             aria-describedby={errors.projectType ? "projectType-error" : undefined}
           >
             <option value="">Select a project type</option>
-            <option value="building-contracting">Building Contracting</option>
-            <option value="road-infrastructure">Road & Infrastructure</option>
-            <option value="interior-landscape">Interior & Landscape Design</option>
-            <option value="sustainable-design">Sustainable Design</option>
-            <option value="project-management">Project Management</option>
-            <option value="renovation">Renovation & Remodeling</option>
+            <option value="building-contracting">Building Construction</option>
+            <option value="road-infrastructure">Interior Design & Fit-Out</option>
+            <option value="interior-landscape">Landscaping & External Works</option>
+            <option value="sustainable-design">Swimming Pools & Water Features</option>
             <option value="other">Other</option>
           </select>
           {errors.projectType && (

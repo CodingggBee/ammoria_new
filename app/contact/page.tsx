@@ -15,7 +15,7 @@ export default function Contact() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#1f4245] via-[#163137] to-[#0e2022] text-white">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0aDJ2MmgtaDJ6TTM2IDMwaDJ2MmgtMnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-20"></div>
         <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
@@ -56,12 +56,12 @@ export default function Contact() {
                   <div>
                     <h3 className="text-sm font-medium text-slate-500">Phone</h3>
                     <a
-                      href="tel:+1234567890"
+                      href="tel:+975545422055"
                       className="mt-1 block text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors"
                     >
-                      (123) 456-7890
+                      (+975) 545422055
                     </a>
-                    <p className="mt-1 text-sm text-slate-600">Mon-Fri 8am-6pm</p>
+                    <p className="mt-1 text-sm text-slate-600">Mon-Sat 9am-6pm</p>
                   </div>
                 </div>
 
@@ -75,10 +75,10 @@ export default function Contact() {
                   <div>
                     <h3 className="text-sm font-medium text-slate-500">Email</h3>
                     <a
-                      href="mailto:info@ammoriacontracting.com"
+                      href="mailto:ammoriacontracting@gmail.com"
                       className="mt-1 block text-lg font-semibold text-slate-900 hover:text-blue-600 transition-colors break-all"
                     >
-                      info@ammoriacontracting.com
+                      ammoriacontracting@gmail.com
                     </a>
                     <p className="mt-1 text-sm text-slate-600">We respond within 24 hours</p>
                   </div>
@@ -95,11 +95,11 @@ export default function Contact() {
                   <div>
                     <h3 className="text-sm font-medium text-slate-500">Office Address</h3>
                     <p className="mt-1 text-lg font-semibold text-slate-900">
-                      123 Construction Avenue
+                    mediterranean sea street - Industrial Area 3,
                       <br />
-                      Building City, BC V1A 2B3
+                      Industrial Area,
                       <br />
-                      Canada
+                      Sharjah-United Arab Emirates.
                     </p>
                     <p className="mt-1 text-sm text-slate-600">Visit us by appointment</p>
                   </div>

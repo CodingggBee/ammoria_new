@@ -133,7 +133,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm text-slate-300">
               <li>
                 <a
-                  href="tel:+1234567890"
+                  href="tel:++97165439390"
                   className="hover:text-white transition-colors flex items-center gap-2"
                 >
                   <svg
@@ -154,7 +154,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+971506388875"
                   className="hover:text-white transition-colors flex items-center gap-2"
                 >
                   <svg
@@ -175,7 +175,7 @@ export default function Footer() {
               </li>
               <li>
                 <a
-                  href="tel:+1234567890"
+                  href="tel:+975545422055"
                   className="hover:text-white transition-colors flex items-center gap-2"
                 >
                   <svg
@@ -213,6 +213,28 @@ export default function Footer() {
                     />
                   </svg>
                   ammoria@ammoria.ae
+                </a>
+              </li>
+              <li>
+                <a
+                  href="mailto:ammoriacontracting@gmail.com"
+                  className="hover:text-white transition-colors flex items-center gap-2 break-all"
+                >
+                  <svg
+                    className="h-5 w-5 flex-shrink-0"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      strokeWidth={2}
+                      d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                    /> 
+                  </svg>
+                  <p>Info : </p>
+                  ammoriacontracting@gmail.com
                 </a>
               </li>
               <li className="flex items-start gap-2">

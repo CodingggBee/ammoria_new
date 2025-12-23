@@ -15,7 +15,7 @@ export function HeroExample1() {
       headline="Transform Your Space Today"
       subtext="Professional contracting services that bring your vision to life with quality craftsmanship and exceptional service."
       primaryButtonText="Get Started"
-      primaryButtonHref="#contact"
+      primaryButtonHref="/contact"
       secondaryButtonText="Learn More"
       secondaryButtonHref="/about"
     />
@@ -29,7 +29,7 @@ export function HeroExample2() {
       headline="Building Excellence, One Project at a Time"
       subtext="Trusted by homeowners and businesses for quality craftsmanship and reliable service."
       primaryButtonText="Get Free Quote"
-      primaryButtonHref="#contact"
+      primaryButtonHref="/contact"
       secondaryButtonText="View Our Work"
       secondaryButtonHref="/projects"
       image={

@@ -13,13 +13,14 @@ export default function About() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white">
+      <section className="relative overflow-hidden bg-[#163137] text-white text-white">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0aDJ2MmgtaDJ6TTM2IDMwaDJ2MmgtMnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-20"></div>
         <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
           <div className="mx-auto max-w-4xl text-center">
             <h1 className="text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl">
               Decades of Experience.
-              <span className="block text-blue-400">One Focus: Your Project's Success.</span>
+              <span className="block text-sky-300"
+              >One Focus: Your Project's Success.</span>
             </h1>
             <p className="mt-6 text-lg leading-8 text-slate-300 sm:text-xl">
               Serving clients with excellence since 1982
@@ -37,19 +38,19 @@ export default function About() {
             </h2>
             <div className="mt-8 space-y-6 text-lg leading-8 text-slate-600">
               <p>
-                For over four decades, Ammoria Contracting has been built on a simple principle: 
-                putting our clients at the center of everything we do. What started as a small 
-                family business in 1982 has grown into a trusted name in construction, but our 
+                For over four decades, Ammoria Contracting has been built on a simple principle:
+                putting our clients at the center of everything we do. What started as a small
+                family business in 1982 has grown into a trusted name in construction, but our
                 commitment to personalized service and exceptional craftsmanship has never wavered.
               </p>
               <p>
-                We believe that every project, whether it's a small renovation or a major build, 
-                deserves the same level of attention, care, and expertise. Our team of skilled 
-                professionals brings decades of combined experience to every job, ensuring that 
+                We believe that every project, whether it's a small renovation or a major build,
+                deserves the same level of attention, care, and expertise. Our team of skilled
+                professionals brings decades of combined experience to every job, ensuring that
                 your vision becomes reality with precision and quality that stands the test of time.
               </p>
               <p>
-                Today, we're proud to serve homeowners and businesses across the region, 
+                Today, we're proud to serve homeowners and businesses across the region,
                 maintaining the same client-centered approach that has defined us from day one.
               </p>
             </div>
@@ -184,7 +185,7 @@ export default function About() {
               Recognized excellence and trusted partnerships
             </p>
           </div>
-          
+
           {/* Awards */}
           <div className="mt-12">
             <h3 className="text-xl font-semibold text-slate-900 text-center mb-8">Awards</h3>
@@ -263,7 +264,15 @@ export default function About() {
       </section>
 
       {/* CTA Section */}
-      <section className="bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 py-24 text-white">
+      <section className="
+        bg-gradient-to-br
+        from-[#1f4245]
+        via-[#163137]
+        to-[#0e2022]
+        py-24
+        text-white
+      ">
+
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
@@ -274,16 +283,16 @@ export default function About() {
             </p>
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
-                href="/#contact"
-                className="rounded-lg bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-lg transition-all hover:bg-blue-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                href="/contact"
+                className="rounded-lg bg-white px-8 py-4 text-base font-semibold text-[#163137] shadow-lg transition-all hover:bg-gray-100 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2"
               >
                 Contact Us
               </a>
               <a
-                href="tel:+1234567890"
+                href="tel:+97165439390"
                 className="rounded-lg border-2 border-white/20 bg-white/10 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/20 hover:border-white/30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-900"
               >
-                Call (123) 456-7890
+                Call (+971) 65439390
               </a>
             </div>
           </div>
