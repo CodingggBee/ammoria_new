@@ -177,6 +177,24 @@ const projects = [
       features: [
       ""],
     },
+    {
+      id: 9,
+      title: "Private Villa Interior Design",
+      category: "",
+      location: "Interior Design",
+      // year: "2024",
+      description:
+        "",
+      image: "bg-gradient-to-br from-teal-400 to-teal-600",
+      // Add your basement project images here
+      images: ["/projects/Private Villa Interior Design2.jpeg",
+        "/projects/Private Villa Interior Design1.jpeg",
+        "/projects/Private Villa Interior Design3.jpeg",
+        "/projects/Private Villa Interior Design4.jpeg",
+      ],
+      features: [
+      ""],
+    },
   ];
 
 export default function Projects() {

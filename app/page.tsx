@@ -35,8 +35,8 @@ export default function Home() {
     {
       title: "Sharjah University City, Main Road",
       category: "Infrastructure & Roads",
-      description:"",
-        // "High-quality road and infrastructure works delivering safe, durable, and efficient transport routes.",
+      description: "",
+      // "High-quality road and infrastructure works delivering safe, durable, and efficient transport routes.",
       image: "/projects/Infrastructue & Roads2.jpg",
       images: [
         "/projects/Infrastructue & Roads2.jpg",
@@ -46,8 +46,8 @@ export default function Home() {
     {
       title: "Villa Contracting",
       category: "Resedential Project",
-      description:"",
-        // "High-quality road and infrastructure works delivering safe, durable, and efficient transport routes.",
+      description: "",
+      // "High-quality road and infrastructure works delivering safe, durable, and efficient transport routes.",
       image: "/projects/Villa Contracting2.jpg",
       images: [
         "/projects/Villa Contracting2.jpg",
@@ -123,28 +123,48 @@ export default function Home() {
   return (
     <>
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white -mt-20 pt-20">
-        <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0aDJ2MmgtaDJ6TTM2IDMwaDJ2MmgtMnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-20"></div>
-        <div className="relative mx-auto max-w-7xl px-4 py-24 sm:px-6 sm:py-32 lg:px-8">
-          <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-5xl font-bold tracking-tight sm:text-6xl lg:text-7xl">
-              Building Excellence,
-              <span className="block text-blue-400">One Project at a Time</span>
-            </h1>
-            <p className="mt-6 text-lg leading-8 text-slate-300 sm:text-xl">
+      <section className="relative -mt-20 pt-20 text-white">
+        {/* Background image */}
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{ backgroundImage: "url('/projects/Home Page .jpg')" }}
+        />
+
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-black/20" />
+
+        {/* Content */}
+        <div className="relative w-screen px-6 py-24 sm:py-32">
+          {/* Full-width heading */}
+          <h1 className="w-full text-center text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
+            AMMORIA BUILDING CONTRACTING LLC
+            <span className="block text-blue-400 text-xl sm:text-2xl lg:text-3xl">
+              
+            </span>
+          </h1>
+
+          {/* Paragraph */}
+          <div className="mx-auto mt-6 max-w-3xl text-center">
+            <p className="text-lg leading-8 text-slate-300 sm:text-xl">
               Professional contracting services with decades of experience.
               Trusted by homeowners and businesses for quality craftsmanship and reliable service.
             </p>
+
+            {/* Buttons */}
             <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
               <a
                 href="/contact"
-                className="rounded-lg bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-lg transition-all hover:bg-blue-700 hover:shadow-xl focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                className="rounded-lg bg-blue-600 px-8 py-4 text-base font-semibold text-white shadow-lg transition-all duration-300 transform hover:scale-105 hover:bg-blue-700 hover:shadow-xl"
+                style={{
+                  backgroundColor: "#163137",
+                  borderColor: "#163137",
+                }}
               >
                 Get Free Quote
               </a>
               <a
                 href="#projects"
-                className="rounded-lg border-2 border-white/20 bg-white/10 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/20 hover:border-white/30 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-slate-900"
+                className="rounded-lg border-2 border-white/20 bg-white/10 px-8 py-4 text-base font-semibold text-white backdrop-blur-sm transition-all hover:bg-white/20"
               >
                 View Our Work
               </a>
@@ -152,6 +172,7 @@ export default function Home() {
           </div>
         </div>
       </section>
+
 
       {/* Trust Indicators */}
       <section className="bg-slate-50 py-16">
@@ -211,8 +232,8 @@ export default function Home() {
           <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
-                title: "General Contracting",
-                description: "Full-service project management from planning to completion. We coordinate all aspects of your construction project.",
+                title: "Landscaping & External Works",
+                description: "Comprehensive landscaping solutions including hardscape construction, softscape design, outdoor lighting, and custom water features crafted to enhance functionality, aesthetics, and long-term value.",
                 icon: (
                   <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -220,8 +241,8 @@ export default function Home() {
                 ),
               },
               {
-                title: "Renovations & Remodeling",
-                description: "Transform your space with expert design and construction. Kitchen, bathroom, and whole-home renovations.",
+                title: "Construction",
+                description: "Construction of residential villas, warehouses, offices, and compounds delivered with quality craftsmanship, regulatory compliance, and timely execution.",
                 icon: (
                   <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
@@ -229,38 +250,11 @@ export default function Home() {
                 ),
               },
               {
-                title: "Roofing & Siding",
-                description: "Protect your property with quality roofing and siding solutions. Expert installation and repair services.",
+                title: "Interior & Fit-Out",
+                description: "Residential and commercial interior design and fit-out execution, delivering functional, aesthetic, and high-quality interior spaces.",
                 icon: (
                   <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
-                  </svg>
-                ),
-              },
-              {
-                title: "Electrical Work",
-                description: "Licensed electricians for installations, repairs, and upgrades. Safe, code-compliant electrical solutions.",
-                icon: (
-                  <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
-                  </svg>
-                ),
-              },
-              {
-                title: "Plumbing Services",
-                description: "Expert plumbing installation and repair. From leaky faucets to complete system replacements.",
-                icon: (
-                  <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z" />
-                  </svg>
-                ),
-              },
-              {
-                title: "HVAC Installation",
-                description: "Climate control solutions for your home or business. Energy-efficient heating and cooling systems.",
-                icon: (
-                  <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" />
                   </svg>
                 ),
               },
