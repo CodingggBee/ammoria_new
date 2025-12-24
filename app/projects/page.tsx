@@ -177,31 +177,13 @@ const projects = [
       features: [
       ""],
     },
-    {
-      id: 9,
-      title: "Private Villa Interior Design",
-      category: "",
-      location: "Interior Design",
-      // year: "2024",
-      description:
-        "",
-      image: "bg-gradient-to-br from-teal-400 to-teal-600",
-      // Add your basement project images here
-      images: ["/projects/Private Villa Interior Design2.jpeg",
-        "/projects/Private Villa Interior Design1.jpeg",
-        "/projects/Private Villa Interior Design3.jpeg",
-        "/projects/Private Villa Interior Design4.jpeg",
-      ],
-      features: [
-      ""],
-    },
   ];
 
 export default function Projects() {
   return (
     <div className="min-h-screen bg-white">
       {/* Hero Section */}
-      <section className="relative overflow-hidden bg-gradient-to-br from-slate-900 via-slate-800 to-slate-900 text-white -mt-20 pt-32 pb-24">
+      <section className="relative overflow-hidden bg-gradient-to-br from-[#1f4245] via-[#163137] to-[#0e2022] text-white -mt-20 pt-32 pb-24">
         <div className="absolute inset-0 bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNjAiIGhlaWdodD0iNjAiIHZpZXdCb3g9IjAgMCA2MCA2MCIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj48ZyBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPjxnIGZpbGw9IiNmZmYiIGZpbGwtb3BhY2l0eT0iMC4wNSI+PHBhdGggZD0iTTM2IDM0aDJ2MmgtaDJ6TTM2IDMwaDJ2MmgtMnoiLz48L2c+PC9nPjwvc3ZnPg==')] opacity-20"></div>
         <div className="relative mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-3xl text-center">

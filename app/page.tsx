@@ -139,7 +139,7 @@ export default function Home() {
           <h1 className="w-full text-center text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight leading-tight">
             AMMORIA BUILDING CONTRACTING LLC
             <span className="block text-blue-400 text-xl sm:text-2xl lg:text-3xl">
-              
+
             </span>
           </h1>
 
@@ -226,19 +226,23 @@ export default function Home() {
       <section id="services" className="py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
-          <h2 className="text-3xl font-bold tracking-tight text-sky-300 sm:text-4xl">      
+            {/* Heading */}
+            <h2 className="text-3xl font-bold tracking-tight text-slate-900 dark:text-white sm:text-4xl">
               Our Services
             </h2>
-            <p className="mt-4 text-lg text-sky-300">
 
+            {/* Subheading */}
+            <p className="mt-4 text-lg text-slate-700 dark:text-slate-300">
               Comprehensive contracting solutions for residential and commercial projects
             </p>
           </div>
+
           <div className="mt-16 grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-3">
             {[
               {
                 title: "Landscaping & External Works",
-                description: "Comprehensive landscaping solutions including hardscape construction, softscape design, outdoor lighting, and custom water features crafted to enhance functionality, aesthetics, and long-term value.",
+                description:
+                  "Comprehensive landscaping solutions including hardscape construction, softscape design, outdoor lighting, and custom water features crafted to enhance functionality, aesthetics, and long-term value.",
                 icon: (
                   <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 21V5a2 2 0 00-2-2H7a2 2 0 00-2 2v16m14 0h2m-2 0h-5m-9 0H3m2 0h5M9 7h1m-1 4h1m4-4h1m-1 4h1m-5 10v-5a1 1 0 011-1h2a1 1 0 011 1v5m-4 0h4" />
@@ -247,7 +251,8 @@ export default function Home() {
               },
               {
                 title: "Construction",
-                description: "Construction of residential villas, warehouses, offices, and compounds delivered with quality craftsmanship, regulatory compliance, and timely execution.",
+                description:
+                  "Construction of residential villas, warehouses, offices, and compounds delivered with quality craftsmanship, regulatory compliance, and timely execution.",
                 icon: (
                   <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
@@ -256,7 +261,8 @@ export default function Home() {
               },
               {
                 title: "Interior & Fit-Out",
-                description: "Residential and commercial interior design and fit-out execution, delivering functional, aesthetic, and high-quality interior spaces.",
+                description:
+                  "Residential and commercial interior design and fit-out execution, delivering functional, aesthetic, and high-quality interior spaces.",
                 icon: (
                   <svg className="h-8 w-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
@@ -266,16 +272,23 @@ export default function Home() {
             ].map((service, index) => (
               <div
                 key={index}
-                className="group relative rounded-xl border border-slate-200 bg-white p-8 shadow-sm transition-all hover:border-blue-300 hover:shadow-lg"
+                className="group relative rounded-xl border border-slate-200 dark:border-white/10 bg-white dark:bg-[#10252b] p-8 shadow-sm transition-all hover:shadow-lg"
               >
-                <div className="mb-4 text-blue-600 transition-colors group-hover:text-blue-700">
+                <div className="mb-4 text-[#163137] dark:text-sky-400">
                   {service.icon}
                 </div>
-                <h3 className="text-xl font-semibold text-slate-900">{service.title}</h3>
-                <p className="mt-3 text-slate-600">{service.description}</p>
+
+                <h3 className="text-xl font-semibold text-slate-900 dark:text-white">
+                  {service.title}
+                </h3>
+
+                <p className="mt-3 text-slate-600 dark:text-slate-300">
+                  {service.description}
+                </p>
+
                 <a
                   href="/contact"
-                  className="mt-4 inline-flex items-center text-sm font-medium text-blue-600 hover:text-blue-700"
+                  className="mt-4 inline-flex items-center text-sm font-medium text-[#163137] dark:text-sky-400 hover:underline"
                 >
                   Learn more
                   <svg className="ml-1 h-4 w-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -288,12 +301,13 @@ export default function Home() {
         </div>
       </section>
 
+
       {/* Featured Projects Preview */}
       <section id="projects" className="bg-slate-50 py-24">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl"
-            style={{ color: "#163137" }}
+              style={{ color: "#163137" }}
             >
               Featured Projects
             </h2>
@@ -431,10 +445,10 @@ export default function Home() {
 
       {/* Contact Section (for anchor link) */}
       <section id="contact" className="bg-slate-900 py-24 text-white"
-      style={{
-        backgroundColor: "#163137",
-        borderColor: "#163137",
-      }}>
+        style={{
+          backgroundColor: "#163137",
+          borderColor: "#163137",
+        }}>
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="mx-auto max-w-2xl text-center">
             <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
